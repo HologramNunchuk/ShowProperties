@@ -7,7 +7,6 @@ const luke = {
   jediRank: "Master",
   sithRank: null
 };
-
 const darthVader = {
   name: "Darth Vader",
   jedi: false,
@@ -17,7 +16,6 @@ const darthVader = {
   jediRank: null,
   sithRank: "Lord"
 };
-
 const yoda = {
   name: "Yoda",
   jedi: true,
@@ -27,17 +25,9 @@ const yoda = {
   jediRank: "Grand Master",
   sithRank: null
 };
-
-showProperties(yoda);
-
+showProperties(luke);
 function showProperties(object) {
   for (let key in object) {
-    if (
-      typeof object[key] === "string" ||
-      typeof object[key] === "number" ||
-      typeof object[key] === "boolean" ||
-      typeof object[key] === "object"
-    )
-      console.log(key, object[key]);
+    if (typeof object[key] !== "undefined") console.log(key, object[key]);
   }
 }
